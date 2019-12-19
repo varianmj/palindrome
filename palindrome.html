@@ -1,0 +1,26 @@
+<html>
+<head><title>Palindrome - Javascript</title>
+</head>
+<body>
+Masukan kata yang ingin di cek: <input type="text" id="text">
+<input type="submit" value="Check" onclick="palindrome()">
+<script type="text/Javascript">
+
+function palindrome(){
+	revString = ""; //menukar string
+	inpString = document.getElementById("text").value;
+	i= inpString.length;
+
+	for(var j=i ; j>=0; j--){
+		revString = revString + inpString.charAt(j);
+		document.write(revString+"<br>");
+	}
+
+
+	if(inpString  === revString) {
+	alert(inpString+" adalah kata palindrome");
+	}
+	 else{
+	 alert(inpString+" adalah kata tidak palindrome");
+	 }
+	}
